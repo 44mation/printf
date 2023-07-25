@@ -1,25 +1,29 @@
 #include "main.h"
 
 /**
- *  * _putchar - writes the character c to stdout
- *   * @c: The character to print
- *    *
- *     * Return: On success 1.
- *      * On error, -1 is returned, and errno is set appropriately.
- *       */
+ * _putchar - writes the character c to stdout
+ * @c: The character to print
+ *
+ * Return: On success 1.
+ * On error, -1 is returned, and errno is set appropriately.
+*/
 int _putchar(char c)
 {
 		return (write(1, &c, 1));
 }
 
-/***/
+/**
+ * print_string - function to print strings
+ * @str: the string
+ * Return: the length
+*/
 
 int print_string(char *str)
 {
 	int i = 0;
-		
+
 	if (str == NULL)
-	return (i);
+		return (i);
 
 	while (str[i])
 	{
@@ -29,7 +33,10 @@ int print_string(char *str)
 	return (i);
 }
 
-/***/
+/**
+ * print_number - function to print integers
+ * @num: the number to print
+*/
 
 void print_number(int num)
 {
@@ -50,16 +57,20 @@ void print_number(int num)
 	}
 }
 
-/***/
+/**
+ * get_num_len - get number's legnth
+ * @num: the number
+ * Return: the length
+*/
 
 int get_num_len(int num)
 {
 	int len = 1;
-	
+
 	while (num > 9)
 	{
 		len++;
 		num /= 10;
 	}
-	return len;
+	return (len);
 }
