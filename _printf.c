@@ -53,6 +53,8 @@ int _printf(const char *format, ...)
 			{
 				int num = va_arg(args, int);
 
+				if (num < 0)
+					count++;
 				count += get_num_len(num);
 				print_int_bin(num);
 			}
