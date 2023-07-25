@@ -49,6 +49,13 @@ int _printf(const char *format, ...)
 				count += get_num_len(num);
 				print_number(num);
 			}
+			else if (*format == 'b')
+			{
+				int num = va_arg(args, int);
+
+				count += get_num_len(num);
+				print_int_bin(num);
+			}
 			else
 			{
 				_putchar('%');

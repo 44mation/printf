@@ -11,5 +11,6 @@ int _printf(const char *format, ...);
 int print_string(char *str);
 void print_number(int num);
 int get_num_len(int num);
+void print_int_bin(int n);
 
 #endif

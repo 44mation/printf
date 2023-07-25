@@ -74,3 +74,24 @@ int get_num_len(int num)
 	}
 	return (len);
 }
+
+/**
+ * print_int_bin - convert integer to binary
+ * @n: the number to convert
+*/
+
+void print_int_bin(int n)
+{
+	int bin = 0;
+
+	int r, i = 1;
+
+	while (n != 0)
+	{
+		r = n % 2;
+		n /= 2;
+		bin += r * i;
+		i *= 10;
+	}
+	print_number(bin);
+}
